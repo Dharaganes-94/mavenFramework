@@ -6,7 +6,8 @@
 		
             <class name="com.w3schools.utils.Sewrappers" />
 			<class name="com.w3schools.utils.W3wrappers" />
-			<class name="com.w3schools.tests.LoginTest" />      
+			<class name="com.w3schools.utils.Reports" />
+			<class name="com.w3schools.tests.LoginTest" />
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

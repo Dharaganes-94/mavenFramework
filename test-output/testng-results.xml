@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-21T11:29:53 IST" name="Suite" finished-at="2023-11-21T11:30:04 IST" duration-ms="11156">
+  <suite started-at="2023-11-24T11:41:32 IST" name="Default suite" finished-at="2023-11-24T11:41:43 IST" duration-ms="10627">
     <groups>
     </groups>
-    <test started-at="2023-11-21T11:29:53 IST" name="Test" finished-at="2023-11-21T11:30:04 IST" duration-ms="11156">
+    <test started-at="2023-11-24T11:41:32 IST" name="Default test" finished-at="2023-11-24T11:41:43 IST" duration-ms="10627">
       <class name="com.w3schools.tests.LoginTest">
-        <test-method signature="loginWithValidCredentials()[pri:0, instance:com.w3schools.tests.LoginTest@7cc0cdad]" started-at="2023-11-21T11:29:53 IST" name="loginWithValidCredentials" finished-at="2023-11-21T11:30:04 IST" duration-ms="11083" status="PASS">
+        <test-method signature="loginWithValidCredentials()[pri:0, instance:com.w3schools.tests.LoginTest@750e2b97]" started-at="2023-11-24T11:41:32 IST" name="loginWithValidCredentials" finished-at="2023-11-24T11:41:43 IST" duration-ms="10561" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithValidCredentials -->
       </class> <!-- com.w3schools.tests.LoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

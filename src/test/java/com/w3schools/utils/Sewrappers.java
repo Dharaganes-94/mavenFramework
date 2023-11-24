@@ -42,10 +42,16 @@ public class Sewrappers {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			System.out.println("Browser launched successfully");
 			
+			//to capture logs in the report
+			Reports.reportStep("PASS","Chrome browser launched successfully");
+			
 		}
 		catch(Exception ex)
 		{
-			System.out.println("Problem while launching the browser");
+			
+			Reports.reportStep("FAIL","Problem while launching the browser");
+
+			//System.out.println("Problem while launching the browser");
 			ex.printStackTrace();
 			
 		}
@@ -57,11 +63,17 @@ public class Sewrappers {
 		try
 		{
 			driver.close();
-			System.out.println("Current browser window closed successfully");
+			//System.out.println("Current browser window closed successfully");
+			Reports.reportStep("PASS","Current browser window closed successfully");
+
+			
 		}
 		catch(Exception ex)
 		{
-			System.out.println("Problem while closing the current browser");
+			//System.out.println("Problem while closing the current browser");
+			Reports.reportStep("FAIL","Problem while closing the current browser");
+
+			ex.printStackTrace();
 		}
 	}
 	
@@ -71,11 +83,15 @@ public class Sewrappers {
 		try
 		{
 			driver.quit();
-			System.out.println("All browsers closed successfully");
+			//System.out.println("All browsers closed successfully");
+			Reports.reportStep("PASS","All browsers closed successfully");
 		}
 		catch(Exception ex)
 		{
-  			System.out.println("Problem while closing the browsers");
+  			//System.out.println("Problem while closing the browsers");
+			Reports.reportStep("FAIL","Problem while closing all the  browser");
+
+  			ex.printStackTrace();
 		}
 	}
 	
@@ -86,10 +102,15 @@ public class Sewrappers {
 		{
 			element.clear();
 			element.sendKeys(text);
+			
+			Reports.reportStep("PASS","Typed the text "+text+" successfully");
+
 		}
 		catch(Exception ex)
 		{
-			ex.printStackTrace();
+			//System.out.println("Problem while typing the text");
+			Reports.reportStep("FAIL","Problem whle typing the "+text);
+            ex.printStackTrace();
 		}
 	}
 	
@@ -99,9 +120,13 @@ public class Sewrappers {
 		try
 		{
 			ele.click();
+			Reports.reportStep("PASS","Clicked the element sucessfully");
+
 		}
 		catch(Exception ex)
 		{
+			Reports.reportStep("PASS","Problem while Clicking the element");
+
 			ex.printStackTrace();
 		}
 	}
@@ -114,9 +139,14 @@ public class Sewrappers {
 		{
 			Select sel = new Select(ele);
 			sel.selectByIndex(index);
+			Reports.reportStep("PASS","Selected the WebElement by Index Successfully");
+
+			
 		}
 		catch(Exception ex)
 		{
+			Reports.reportStep("FAIL","Problem whilw Selecting  WebElement by Index ");
+
 			ex.printStackTrace();
 		}
 	}
